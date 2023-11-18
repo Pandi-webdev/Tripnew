@@ -1,0 +1,549 @@
+/* Resetting default padding/margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+/* Header Styles */
+header {
+    color: #fff;
+    padding: 15px 0;
+    position:sticky;
+    top:0;
+    background-color: white;
+    z-index: 100;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    /* transition: color 0.3s ease; */
+    padding: 10px;
+}
+
+.nav-links a:hover {
+    /* background-color: #f2f2f2; */
+    background-color: #f2f2f2;
+    border-radius: 15px;
+    box-shadow: inset 0 0 0 1px #f2f2f2, 0 0 0 5px #f2f2f2;
+}
+
+.nav-extras {
+    display: flex;
+    align-items: center;
+}
+
+.currency-selector,
+.sign-in {
+    margin-left: 20px;
+}
+
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+}
+
+.currency-icon {
+    margin-right: 5px;
+}
+
+.signin-button {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.signin-button:hover {
+    background-color: #242425;
+}
+
+.currency-selector button {
+    width: 120px; /* Set a fixed width */
+    height: 40px; /* Set a fixed height */
+    padding: 0;
+    /* Center content horizontally and vertically */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Other styles */
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: black;
+    font-size: 16px;
+}
+
+.currency-icon {
+    margin-right: 5px; /* Adjust icon/text spacing */
+}
+
+.currency-selector button:hover {
+    background-color: #f2f2f2;
+    border-radius: 20px;
+    /* Ensure the same fixed size without adding padding */
+    width: 120px;
+    height: 40px;
+    /* Other styles */
+}
+
+.currency-selector,
+.sign-in {
+    /* Adjust margin to reduce space */
+    margin-left: 10px; /* Or set as needed */
+}
+
+/* Adjust margin for .sign-in to remove extra space */
+.sign-in {
+    margin-left: 0; /* Reset margin to remove space */
+    margin-right: 10px; /* Apply margin only on the right side */
+}
+
+
+
+.nav-links a.nav-trips:hover {
+    background-color: transparent; /* Remove background color */
+    border-radius: 0; /* Remove border-radius */
+    box-shadow: none; /* Remove box-shadow */
+}
+
+.nav-links a.nav-trips:hover {
+    text-decoration: underline !important;
+}
+
+.whereto {
+    text-align: center; /* Center align the content */
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.whereto p {
+    font-weight: bold; /* Set text to bold */
+    font-size: 40px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 20px; /* Adjust margin as needed */
+}
+
+.icon-button {
+    background: none;
+    border: 3px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: black;
+    font-size: 16px;
+    padding: 8px 15px; /* Set fixed padding */
+    transition: box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.icon-button i {
+    margin-right: 5px;
+}
+.icon-button span {
+    font-weight: bold;
+}
+
+.icon-button:hover {
+   border-bottom: 3px solid grey;
+   width: fit-content;
+   /* text-decoration: underline; */
+}
+
+/* Search Container Styles */
+.search-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    
+}
+
+.search-section {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd; /* Example border style */
+    border-radius: 25px;
+    padding: 5px;
+    width: 52%;
+}
+
+.fa-magnifying-glass {
+    font-size: 20px;
+    margin-right: 5px;
+    /* Additional styles for the icon */
+}
+
+input[type="text"] {
+    border: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+    /* Additional styles for the input field */
+}
+
+.search-button {
+    margin-left: 10px;
+}
+
+input[type="submit"] {
+    padding: 8px 15px;
+    background-color: #34e0a1;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    /* Additional styles for the search button */
+}
+
+input[type="submit"]:hover {
+    background-color: #79a997;
+    /* Additional styles for hover */
+}
+
+/* Existing CSS... */
+
+/* Image Container Styles */
+.image-container {
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+    position: relative;
+    border-radius: 15px; /* Added rounded corners */
+    overflow: hidden; /* Ensure content stays within the rounded border */
+}
+
+.image-container img {
+    width: 100%; /* Set image width to fill its container */
+    display: block; /* Ensure the image does not overflow its container */
+    height: 500px;
+}
+.img-tag{
+
+    padding: 15px;
+    width: fit-content;
+    position: absolute;
+    top:65%;
+    left: 5%;
+    color:white;
+
+}
+.img-tag__btn{
+    font-weight: bold;
+    color: black;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+    margin-top: 20px;
+}
+.year-end{
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+}
+.year-end1{
+    width: 100%; /* Set image width to fill its container */
+    display: flex; /* Ensure the image does not overflow its container */
+    justify-content: space-between;
+    align-items: center;
+}
+.year-end1 a{
+    color: black;
+}
+.year-end2{
+    margin-top: 7px;
+}
+.destinations{
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+    display: flex;
+    justify-content: space-between; /* Adjust alignment as needed */
+    gap: 10px;
+    
+    
+}
+.destinations-dubai img{
+    width: 100%; /* Set image width to fill its container */
+    display: block; /* Ensure the image does not overflow its container */
+    height: 250px;
+    border-radius: 15px; /* Added rounded corners */
+    overflow: hidden; /* Ensure content stays within the rounded border */
+    transition: opacity 0.3s ease;
+}
+.destinations-dubai:hover img {
+    opacity: 0.8; /* Adjust the opacity value for your preferred fade effect */
+}
+.destinations-dubai{
+    width: 48%; /* Adjust the width of each destination item */
+    margin-bottom: 20px; /* Add some spacing between items */
+    position: relative;
+    
+}
+.destinations-dubai__tag{
+    padding: 20px;
+    position: absolute;
+    top: 45%; /* Adjust positioning as needed */
+    color: white;
+}
+.destinations-dubai__tag h2 {
+    font-size: 32px; /* Adjust font size as needed */
+    margin: 0;
+}
+
+.diningscene{
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+    display: flex;
+    align-items: stretch;
+}
+.diningscene__tag{
+    background-color:#d5bebe;
+    padding: 15px;
+}
+.diningscene__tag button{
+    font-weight: bold;
+    background-color: black;
+    border-radius: 15px;
+    padding: 10px;
+    color: white;
+    margin-top: 60px;
+}
+.diningscene__tag span{
+    background-color: black;
+    padding: 5px;
+    color: white;
+    
+}
+.diningscene__tag h2{
+    margin-top: 5px;
+}
+.diningscene__tag p{
+    width: 770px; /* Set your preferred width */
+    /* Enable text truncation */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; /* Display ellipsis for overflowed text */
+    margin-top: 15px;
+}
+.diningscene__tag,
+.diningscene__img {
+    flex: 1; /* Distribute available space equally */
+    /* Add any other necessary styles */
+    height: 235px;
+}
+
+
+
+.welcome{
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+}
+.welcome-tag p{
+margin-top: 5px;
+}
+
+.like{
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    border-radius: 30px;
+    position: absolute;
+    top: 6%;
+    right: 10px;
+    padding-left: 7px;
+    padding-top: 3px;
+}
+.destinations-dubai__content{
+    margin-top: 8px;
+}
+.traveller{
+    background-color:#fff7e1;
+}
+.traveller-choice{
+    max-width: 1200px; /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.traveller-choice1 {
+    flex: 1;
+    padding-right: 20px; /* Add some spacing between sections */
+}
+.traveller-choice1 button{
+    padding: 13px;
+    background-color: black;
+    color: white;
+    border-radius: 32px;
+    font-weight: bold
+}
+
+
+.traveller-choice2 {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    /* Additional styles based on your design */
+}
+
+.traveller-choice2 img {
+    width: 555px; /* Adjust the image width to fit the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 15px; /* Add rounded corners to the image */
+}
+/* Footer Styles */
+footer {
+    background-color:#faf1ed;
+}
+.footer-sec1{
+    max-width: 1200px;
+    margin: 20px auto; 
+    display: flex;
+    justify-content: space-between
+}
+.footer-sec2{
+    max-width: 1200px;
+    margin: 20px auto; 
+    display: flex;
+}
+
+.footer-sec1__content{
+    display: flex;
+    gap: 60px;
+}
+
+
+.footer-sec1__content ul li,.footer-sec1__tag ul li{
+    color: black;
+    border: none;
+    list-style: none;
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.footer-sec1__content ul li a,.footer-sec1__tag ul li a{
+    color: black;
+    text-decoration: none;
+}
+.footer-sec1__content ul,
+.footer-sec1__tag ul {
+    margin-top: 30px;
+}
+.footer-sec1__content ul li a:hover{
+    text-decoration: underline;
+}
+.footer-sec1__tag ul li a:hover{
+    text-decoration: underline;
+}
+.footer-sec2__content2{
+    padding: 10px;
+    width: 68%;
+}
+.footer-sec2__content2 p{
+    font-size: 10px;
+}
+.footer-sec2__content2 a{
+    color: black;
+    font-weight: bold;
+}
+.footer-sec2__content3 {
+    margin-top: 15px;
+}
+.footer-sec2__content3 select{
+    font-weight: bold;
+    border: 2px solid grey;
+    border-radius: 8px;
+    width: 115px;
+    padding: 5px;
+    width: 150px;
+}
+.footer-sec3{
+    max-width: 1200px;
+    margin: 20px auto; 
+    display: flex;
+    justify-content: space-between;
+}
+.footer-sec3 p{
+width: 75%;
+font-size: 10px;
+margin-bottom: 15px;
+}
+
+
+
+
+/* Example: Adjusting navigation for smaller screens */
+@media (max-width: 768px) {
+    body{
+        font-size: 10px;
+        width: 100%;
+        padding: 10px;
+        margin: 0px;
+    }
+    nav {
+        flex-direction: column;
+    }
+
+    .nav-links {
+        margin-top: 15px;
+        text-align: center;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 10px 0;
+    }
+    .nav-links,.nav-extras,.sign-in{
+        display: none;
+    }
+
+    
+    /* Adjust other elements similarly */
+}
+
+
+
+    
